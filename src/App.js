@@ -110,9 +110,9 @@ function App() {
     localStorage.setItem('selectedTeam', JSON.stringify(selectedTeam));
 
   },[selectedTeam]);
+
   function handleTeamSelectionChange(event)
   {
-    console.log(event.target.value);
     setTeam(event.target.value);
   }
 
@@ -138,7 +138,8 @@ function App() {
               }>
       </Route>
       <Route path = "/GroupedTeamMembers" element ={<GroupedTeamMembers employees= {employees}
-                                                                        selectedTeam = {selectedTeam} setTeam = {setTeam}/>}>
+                                                                        selectedTeam = {selectedTeam} 
+                                                                        setTeam = {setTeam} />}>
 
       </Route>
       <Route path = "*" element ={<NotFound />}>
