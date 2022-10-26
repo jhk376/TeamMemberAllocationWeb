@@ -6,8 +6,6 @@ import Footer from './Footer';
 import Nav from './Nav';
 import NotFound from './NotFound';
 import GroupedTeamMembers from './GroupedTeamMembers';
-
-
 import {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -106,6 +104,7 @@ function App() {
     localStorage.setItem('employeeList', JSON.stringify(employees));
 
   },[employees]);
+  
   useEffect(() => {
     localStorage.setItem('selectedTeam', JSON.stringify(selectedTeam));
 
@@ -150,4 +149,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
